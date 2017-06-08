@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "alwaysStrict": true,
+    "jsx": "react",
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "sourceMap": true,
+    "strictNullChecks": true
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
