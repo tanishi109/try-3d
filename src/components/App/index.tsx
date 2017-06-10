@@ -46,6 +46,12 @@ class App extends Component<Prop, State> {
   componentDidMount() {
     init();
     animate();
+
+    const gui = new dat.GUI();
+
+    gui.add(Vars.camera.position, "x", -500, 500);
+    gui.add(Vars.camera.position, "y", -500, 500);
+    gui.add(Vars.camera.position, "z", 0, 1000);
   }
 
   render() {
