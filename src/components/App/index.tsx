@@ -30,10 +30,7 @@ const init = () => {
 const animate = () => {
   requestAnimationFrame( animate );
 
-  const {mesh, renderer, scene, camera} = Vars;
-
-  mesh.rotation.x += 0.01;
-  mesh.rotation.y += 0.02;
+  const {renderer, scene, camera} = Vars;
 
   renderer.render( scene, camera );
 };
@@ -48,10 +45,19 @@ class App extends Component<Prop, State> {
     animate();
 
     const gui = new dat.GUI();
+    const camera = gui.addFolder("camera");
 
-    gui.add(Vars.camera.position, "x", -500, 500);
-    gui.add(Vars.camera.position, "y", -500, 500);
-    gui.add(Vars.camera.position, "z", 0, 1000);
+    camera.add(Vars.camera.position, "x", -500, 500);
+    camera.add(Vars.camera.position, "y", -500, 500);
+    camera.add(Vars.camera.position, "z", 0, 1000);
+    camera.open();
+
+    const rotation = gui.addFolder("rotation");
+
+    rotation.add(Vars.camera.rotation, "x", -2, 2, 0.01);
+    rotation.add(Vars.camera.rotation, "y", -2, 2, 0.01);
+    rotation.add(Vars.camera.rotation, "z", -2, 2, 0.01);
+    rotation.open();
   }
 
   render() {
