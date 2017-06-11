@@ -1,5 +1,6 @@
 import * as React from "react";
 import {Component} from "react";
+import {RouteComponentProps} from "react-router";
 import * as THREE from "three";
 
 import Vars from "./Vars";
@@ -35,7 +36,7 @@ const animate = () => {
   renderer.render( scene, camera );
 };
 
-interface Prop {}
+interface Prop extends RouteComponentProps<{}> {}
 interface State {}
 
 class App extends Component<Prop, State> {
