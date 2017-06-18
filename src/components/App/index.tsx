@@ -12,7 +12,7 @@ const init = () => {
   camera.position.z = 1000;
 
   const geometry = new THREE.BoxGeometry( 200, 200, 200 );
-  const material = new THREE.MeshBasicMaterial( { color: 0xff0000, wireframe: true } );
+  const material = new THREE.MeshBasicMaterial( { color: 0x20C820, wireframe: true } );
 
   const mesh = new THREE.Mesh( geometry, material );
   scene.add( mesh );
