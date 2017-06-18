@@ -31,7 +31,7 @@ fuse.dev({ root: false }, server => {
 
 fuse
   .bundle("app")
-  .watch().hmr()
+  .watch()
   .instructions("> index.tsx")
 
 fuse.run();
